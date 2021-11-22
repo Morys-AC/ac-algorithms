@@ -5,6 +5,14 @@
 //Bonus 2: Make both numbers whole integers (aka round to the nearest integer) 
 
 function circleCalculation () {
-	//your code here
+	radius = Number(prompt("What is the radius of the circle"));
+	
+	let area = Math.round(Math.PI * (radius * radius));
+	let perimeter = Math.round(Math.PI * (2 * radius));
 
-circleCalculation(10);
+	let sentence = "The area of the circle is " + area + " and the perimeter of the circle is " + perimeter + "."
+
+	return sentence;
+}
+
+console.log(circleCalculation());
