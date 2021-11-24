@@ -8,7 +8,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/type
 */
 
 function isBigger(a, b) {
-	if (typeof a || b === "string" || typeof a || b === undefined) {
+	if (typeof a === "string" || typeof a === undefined || typeof b === "string" || typeof b === undefined) {
 	   return -1;
    }else if (a > b) {
      return true;
