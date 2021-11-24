@@ -8,16 +8,18 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/type
 */
 
 function isBigger(a, b) {
-	if (typeof a === "string" || typeof a === undefined || typeof b === "string" || typeof b === undefined) {
-		return -1;
-	}else if (a > b) {
-    return true;
-  }else if (a < b) {
-    return false;
-  }else {
-    return 0;
-  }
+	if (typeof a || b === "string" || typeof a || b === undefined) {
+	   return -1;
+   }else if (a > b) {
+     return true;
+   }else if (a < b) {
+     return false;
+   }else {
+     return 0;
+ }
 }
+
+console.log(isBigger("banana", 8));
 
 console.log(isBigger(10, 8));
 
