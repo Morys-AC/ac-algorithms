@@ -33,7 +33,19 @@ console.log(result) // "ghimmnorstyy"
 
 **/
 
-function alphabetSoup(str) {
-	//Your code here
-	
-}
+function alphabetSoup(string) {
+	//split(): input is a string, output is array
+	let splitApplied = string.split("");
+  //   console.log(splitApplied);
+	//sort(): input is an array, output is array
+	let sortApplied = splitApplied.sort();
+  //   console.log(sortApplied);
+	//join(): input is array, output is string
+	let joinApplied = sortApplied.join("");
+  //   console.log(joinApplied);
+	let output = string.split("").sort().join("").trim();
+	return output;
+  }
+
+  var result = alphabetSoup("Let's reorder the characters in this string.");
+	console.log(result);
