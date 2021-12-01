@@ -7,8 +7,17 @@
 
 // Check out Arithmetic Operators https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 
-function factorializeIt(num) {
-  //your code here
+function factorial(n){
+  let answer = 1;
+  if (n == 0 || n == 1){
+    return answer;
+  }else{
+    for(var i = n; i >= 1; i--){
+      answer = answer * i;
+    }
+    return answer;
+  }  
 }
-
-factorializeIt(5);
+let n = 5;
+answer = factorial(n)
+console.log("The factorial of " + n + " is " + answer);
