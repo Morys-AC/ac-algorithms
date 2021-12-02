@@ -19,7 +19,8 @@
 // findLongestWord("What if we try a super-long word such as otorhinolaryngology") should return 19.
 
 
-function findLongestWord(str) {
-  //your code here
+function findLongestWord(str) { 
+  return str.split(" ").length;
 }
 
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
