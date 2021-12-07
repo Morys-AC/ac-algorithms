@@ -30,5 +30,31 @@ console.log(result) // "oH, hELLO!!"
 **/
 
 function swapCase(str) {
-	// Your code
+
+	// Split string into an array
+	let worldString = str.split("");
+
+	// Test it
+	console.log(worldString);
+
+	// Create a for loop
+	for(i = 0; i < worldString.length; i++){
+	// Convert Upper to Lower
+		if (worldString[i] === worldString[i].toUpperCase()){
+			worldString[i] = worldString[i].toLowerCase();
+	// Else if convert Lower to Upper
+		} else if (worldString[i] === worldString[i].toLowerCase()){
+			worldString[i] = worldString[i].toUpperCase();
+    	} else {
+	// Else move past non-string characters
+      		worldString[i] = worldString[i]
+    	}
+	}
+	// Join and return the array as a string
+  let newString = worldString.join("");
+  return newString;
 }
+
+	//Pass in an argument and then log it
+var result = swapCase("Hello World!")
+console.log(result)
