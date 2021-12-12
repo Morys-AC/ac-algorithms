@@ -30,7 +30,24 @@ var result = isPrime(51)
 console.log(result) // false
 
 **/
+//One is not a prime number. Check it and return false
+//Two is a prime number. Check it and return true
+//'Else' I have to create a for loop that checks to see if a number is larger than two, then divides that number by itself to see if it equals zero. Return true or false.
 
-function isPrime(num) {
-	// Your code
+function isPrime(n){
+  if (n === 1){
+    return false;
+  }else if(n === 2){
+    return true;
+  }else{
+    for(var x = 2; x < n; x++){
+      if(n % x === 0){
+        return false;
+      }
+    }
+    return true;  
+  }
 }
+
+console.log(isPrime(13));
+console.log(isPrime(22));
